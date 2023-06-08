@@ -1,0 +1,19 @@
+.oddul {
+    background-color: rgb(226, 79, 104);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 24px;
+}
+
+#two{
+    color: blue;
+    font-size: 36px;
+}
+
+#four {
+    background-color: greenyellow;
+    font-weight: 600;
+    font-size: 24px;
+}
+.afs {
+    font-size: 24px;
+}

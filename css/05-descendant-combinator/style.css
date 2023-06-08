@@ -1,0 +1,9 @@
+.container .text {
+    background-color: yellow;
+    color: red;
+    font-size: 20px;
+    text-align: center;
+    width: 25%;
+    border-radius: 10px;
+    border-color: green;
+}
