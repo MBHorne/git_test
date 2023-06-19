@@ -11,8 +11,6 @@ function getComputerChoice(max) {
   else {
     return computerHand = "Rock"
   }
-  console.log(ran)
-  return ran;
 }
 
 
@@ -20,27 +18,23 @@ function getComputerChoice(max) {
 function playRound() {
     let playerSelection = prompt("Please enter Rock, Paper or Scissor:")
     playerSelection = playerSelection.match(/Rock|Paper|Scissor/gi)
-    console.log("You selected: " + playerSelection + "!")
+    console.log("You choosed: " + playerSelection + "!")
     getComputerChoice(3)
-    console.log(computerHand +"!");
+    console.log("Computer choosed: " + computerHand +"!");
     //const playerSelection = getplayerSelection[0].toUpperCase();
     //const computerHand = getComputerHand();
     let winner = null
     if (playerSelection != null || playerSelection != null) {
         if (playerSelection[0].toUpperCase() === computerHand.toLocaleUpperCase()) {
-            console.log("Tie");
             return "Tie";
-    
         } else {
             switch (playerSelection[0].toUpperCase()) {
                 case "ROCK":
                     switch (computerHand.toUpperCase()) {
                         case "PAPER":
-                            console.log("You lose");
                             return winner = "Computer";
                             break;
                         case "SCISSOR":
-                            console.log("You win");
                             return winner = "Player";
                             break;
                         default:
@@ -51,11 +45,9 @@ function playRound() {
                 case "PAPER":
                     switch (computerHand.toUpperCase()) {
                         case "ROCK":
-                            console.log("You win");
                             return winner = "Player";
                             break;
                         case "SCISSOR":
-                            console.log("You lose");
                             return winner = "Computer";
                             break;
                         default:
@@ -84,8 +76,6 @@ function playRound() {
             }
         }
     }else {
-        console.log("Wrong input, try again!");
-        console.log("debug: " + winner);
         return winner = null;
         
     }
@@ -98,15 +88,14 @@ function game(winner) {
         let winner = playRound();
         if (winner !== null) {
             round++;
-            console.log("Current Round: " + round);
             if (winner === "Tie") {
-                console.log("Round: " + round);
+                console.log("Round " + round + " its a TIE");
             } else if (winner === "Player") {
                 playerScore++;
-                console.log("Win: " + round);
+                console.log("You won round " + round);
             } else if (winner === "Computer") {
                 computerScore++;
-                console.log("Lost: " + round);
+                console.log("You Lost round " + round);
             }
         } else {
             console.log("Wrong input, try again!! ")
