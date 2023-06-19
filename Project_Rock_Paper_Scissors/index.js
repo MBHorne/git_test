@@ -84,7 +84,10 @@ function playRound() {
             }
         }
     }else {
-        console.log("Wrong input, try again");
+        console.log("Wrong input, try again!");
+        console.log("debug: " + winner);
+        return winner = null;
+        
     }
     }
 let round = 1;
@@ -92,27 +95,31 @@ let playerScore = 0;
 let computerScore = 0;
 function game(winner) {
     while (round < 6) {
-        round++;
         let winner = playRound();
-        console.log("Current Round: " + round);
-        if (winner === "Tie") {
-            console.log("Round: " + round);
-        } else if (winner === "Player") {
-            playerScore++;
-            console.log("Win: " + round);
-        } else if (winner === "Computer") {
-            computerScore++;
-            console.log("Lost: " + round);
+        if (winner !== null) {
+            round++;
+            console.log("Current Round: " + round);
+            if (winner === "Tie") {
+                console.log("Round: " + round);
+            } else if (winner === "Player") {
+                playerScore++;
+                console.log("Win: " + round);
+            } else if (winner === "Computer") {
+                computerScore++;
+                console.log("Lost: " + round);
+            }
+        } else {
+            console.log("Wrong input, try again!! ")
         }
-  }
+    }
   if (playerScore > computerScore) {
-    console.log("Game Over, You win with " + playerScore + " points vs Computer with" + computerScore + " points");
+    console.log("Game Over, You win with " + playerScore + " points vs Computer with " + computerScore + " points");
   }
   else if (playerScore > computerScore) {
-    console.log("Game Over, You loose with " + playerScore + " points vs Computer with" + computerScore + " points");
+    console.log("Game Over, You loose with " + playerScore + " points vs Computer with " + computerScore + " points");
   }
   else {
-    console.log("Game Over, It´s a TIE " + playerScore + " points vs Computer with" + computerScore + " points");
+    console.log("Game Over, It´s a TIE " + playerScore + " points vs Computer with " + computerScore + " points");
   }
 }
 
