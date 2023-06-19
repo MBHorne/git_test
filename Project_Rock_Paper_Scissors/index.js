@@ -80,11 +80,11 @@ function playRound() {
         
     }
     }
-let round = 1;
+let round = 0;
 let playerScore = 0;
 let computerScore = 0;
 function game(winner) {
-    while (round < 6) {
+    while (round < 5) {
         let winner = playRound();
         if (winner !== null) {
             round++;
@@ -112,5 +112,5 @@ function game(winner) {
   }
 }
 
-let winner = playRound();
+let winner = null;
 game(winner);
