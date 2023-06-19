@@ -108,7 +108,7 @@ function game(winner) {
     console.log("Game Over, You loose with " + playerScore + " points vs Computer with " + computerScore + " points");
   }
   else {
-    console.log("Game Over, It´s a TIE " + playerScore + " points vs Computer with " + computerScore + " points");
+    console.log("Game Over, It´s a TIE. You got " + playerScore + " points vs Computer with " + computerScore + " points");
   }
 }
 
